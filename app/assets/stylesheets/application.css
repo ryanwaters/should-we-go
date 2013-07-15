@@ -1,0 +1,18 @@
+html {
+  font-family: helvetica;
+  font-size: 50px;
+  text-align: center;
+  background: url('./lake_skier.jpg');
+}
+
+.powder_widget {
+  float: right;
+  margin: 40px;
+  width: 300px;
+}
+
+.twitter_widget {
+  float: left;
+  width: 250px;
+  margin: 40px;
+}

@@ -1,0 +1,27 @@
+<html>
+<link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
+
+<h1> SHRED RATING </h1>
+  <p>Enter Mountain</p>
+
+
+<!--<%= @allLocations.inspect %> -->
+
+<form action='/search' method='get'>
+  <input type='text' name='stock'>
+  <button>Get Rating</button> </br>
+
+  <div class='powder_widget'>
+    <iframe src="http://www.opensnow.com/widget/powdermeter.php" style="border:none;" name="opensnow-widget" id="opensnow-widget-powder" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="330px" width="300px"></iframe>
+    <div><a href="http://opensnow.com"><img src="http://www.opensnow.com/img/widgets/300powder.png"  alt="Get the Full List and Get Snow Forecasts at OpenSnow.com" height="55" width="300" border="0" /></a></div>
+
+  </div>
+
+  <div class='twitter_widget'>
+    <a class="twitter-timeline" href="https://twitter.com/search?q=%23skiing" data-widget-id="355508764138414080">Tweets about "#skiing"</a>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </div>
+
+</form>
+
+</html>
