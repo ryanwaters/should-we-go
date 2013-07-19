@@ -19,9 +19,9 @@ class MountainController < ApplicationController
     @travel = JSON.load(open(url).read)
     @slt = @travel['routes'].first['legs'].first['duration']['text']
 
-    
-    
-
+    url = "http://maps.googleapis.com/maps/api/directions/json?origin=San+Francisco,CA&destination=Squaw_Valley,CA&sensor=false"
+    @travel2 = JSON.load(open(url).read)
+    @squaw = @travel2['routes'].first['legs'].first['duration']['text']
 
     @score = compute_score()
     @rating = score_message(@score)
@@ -106,12 +106,14 @@ def score_message(score)
     rating = "Better Than Workin"
   when (rating > 81 && rating < 90)
     rating = "TIME TO SHRED"
-  when (rating > 91)
+  when (rating >= 90)
     rating = "Quit Job, GO SKI"
   end
 
   return rating
 end
+
+
 
 end
     

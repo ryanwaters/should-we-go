@@ -1,22 +1,44 @@
 <html>
+<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="/stylesheets/application.css">
 
 <h1> Choose a Mountain </h1>
 
- <% @resorts =   [["Kirkwood", "142"],["Sugar Bowl", "139"],["Northstar", "138"],["Heavenly", "135"],["Alpine Meadows", "148"],["Sierra at Tahoe", "148"],["Homewood","151"]] %>
+ <% @resorts =   [["Kirkwood", "142"],["Sugar Bowl", "139"],["Northstar", "138"],["Heavenly", "135"],["Alpine Meadows", "148"],["Sierra at Tahoe", "148"],["Homewood","151"], ["Squaw Valley", "141"]] %>
 
-
+<div class='input_box'>
 <%= form_tag controller: 'mountain', action: 'search' do %> 
-  <%= select_tag(:resort_id, options_for_select(@resorts)) %>
+  <%= select_tag(:resort_id, options_for_select(@resorts), {:class => "drop_down"})  %>
 
-   <%= button_tag 'Get Shred Rating' %>
+  <%= button_to 'Get Shred Rating', {}, {:class => "button"} %>
+</div>  
 <% end %>
 
+
+
 <div class='footer'>
-  <p>| Links | About |</p>
+  <div class= 'footer_links'>
+    <p><a href="how_to_use">  How To Use This | </a></p>
+    <p><a href="about"> About |</a></p>
+  </div>  
 </div>
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="jquery.backstretch.min.js"></script>
+<script>
+  // To attach Backstrech as the body's background
+  $.backstretch("path/to/image.jpg");
 
+  // You may also attach Backstretch to a block-level element
+  $(".foo").backstretch("path/to/image.jpg");
+
+  // Or, to start a slideshow, just pass in an array of images
+  $(".foo").backstretch([
+    "./lake_skier.jpg",
+    "./.jpg",
+    "path/to/image3.jpg"    
+  ], {duration: 4000});
+</script>
 <!-- 
   <div class='powder_widget'>
     <iframe src="http://www.opensnow.com/widget/powdermeter.php" style="border:none;" name="opensnow-widget" id="opensnow-widget-powder" scrolling="no" frameborder="0" marginheight="0px" marginwidth="0px" height="330px" width="300px"></iframe>

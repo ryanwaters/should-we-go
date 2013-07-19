@@ -22,6 +22,12 @@ class HomeController < ApplicationController
   def search
   end
 
+  def how_to_use
+  end
+
+  def about
+  end
+
   def twitter
     #https://stream.twitter.com/1.1/statuses/filter.json
   end

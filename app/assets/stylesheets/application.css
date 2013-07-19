@@ -1,22 +1,57 @@
 html {
-  font-family: Helvetica Neue, Helvetica, Arial;
+  font-family: Helvetica Neue, Helvetica;
   font-size: 25px;
   color: #fff;
   text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
   text-align: center;
-  /*background: url('./lake_skier.jpg');*/
+  background: url('./the_heave.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.powder_widget {
-  float: right;
-  margin: 40px;
-  width: 300px;
+html.score-10, .score-9 {
+  background-image: url('./storm_day.jpg');  
 }
 
-.twitter_widget {
-  float: left;
-  width: 250px;
-  margin: 40px;
+html.score-8 {
+  background-image: url('./the_y.jpg');
+}
+
+html.score-7 {
+  background-image: url('./2_tracks.jpg') 
+
+}
+
+html.score-6 {
+  background-image: url('./ok_day.jpg');  
+}
+
+html.score-5, .score-4, .score-3, .score-2, .score-1, .score-0 {
+  background-image: url('./ggbridge.jpg');  
+}
+
+
+.wind {
+  right: 300px;
+  position: relative;
+  
+}
+
+.travel_time {
+  left: 300px;
+  bottom: 153px;
+  position: relative;
+}
+.data_container {
+  width: 100%;
+  height: 175px;
+}
+h1 {
+  font-size: 75px;
+  margin: 3px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 }
 
 .score {
@@ -26,30 +61,111 @@ html {
   text-shadow: 0 10px 9px rgba(100, 100 , 200, 0.3);
 }
 
-.container {
-  background: rgba(0, 25, 100, .7);
-  box-shadow: 0 5px 5px rgba(0, 0, 200, 0.5);
-  border-radius: 25%;
-}
+
 
 .footer {
-  display: block;
   background-color: rgba(255, 255, 255, 0.6);
-  margin: 420px 0 5px 0;
-  height: 100px;
-  border-top: 3px solid #000;
-  clear: both;
-  padding: 15px;
-
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
 }
 
-p {
+.footer_links p a {
   text-align: right;
   color: #000;
   font-size: 20px;
+  padding-right: 5px;
+  text-decoration: none;
+
+}
+.footer_links p {
+  margin: 10px;
+  font-family: 'Permanent Marker', cursive;
 }
 
+.footer_links {
+  text-align: right;
+}
 
+.map {
+  width: 350px;
+  height: 350px;
+  margin:0 auto;
+  border: 3px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
 
+}
+
+.input_box {
+  background: rgba(57,60,61,0.8);
+  border: 1px solid #000;
+  position: relative;
+  top: 5px;
+  width: 585px;
+  height: 42px;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 3px;
+  border-radius: 5px;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+.button {
+  width: 275px;
+  height: 40px;
+  position: relative;
+  left: 150px;
+  top: -40px;
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 5px;  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+  border: 2px solid rgba(0, 0, 255, 1);
+
+}
+
+.drop_down {
+  width: 275px;
+  height: 40px;
+  position: relative;
+  right: 150px;
+  top: 0px;
+  background-color: rgba(250, 250, 250, 1);
+  border-radius: 5px;  
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+  font-size: 20px;
+  font-family: 'Permanent Marker', cursive;
+}
+
+ul {
+ font-family: 'Permanent Marker', cursive; 
+ font-size: 40px;
+ list-style: none;
+ color: #000;
+ text-shadow: 0 0 15px rgba(255, 255, 255, 1);
+}
+
+p {
+  text-shadow: 0 0 15px rgba(0, 0, 0, 1);
+}
+/*.powder_widget {
+  float: right;
+  margin: 40px;
+  width: 300px;
+}
+
+.twitter_widget {
+  float: left;
+  width: 250px;
+  margin: 40px;
+}*/
+
+/*.container {
+  background: rgba(0, 25, 100, .7);
+  box-shadow: 0 5px 5px rgba(0, 0, 200, 0.5);
+  border-radius: 25%;
+}*/
 
 

@@ -1,45 +1,51 @@
-<%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?sensor=false' %>
-<%= javascript_include_tag 'application' %>
+<link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+<script type="text/javascript">
+  function initialize() {
+    var myLatlng = new google.maps.LatLng(37.7750, -122.4183);
+    var mapOptions = {
+      zoom: 13,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+    var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+  }
+
+  google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<style type="text/css">
+  #map-canvas { height: 100% }
+</style>
 
 <div class='container'>
+  - Shred Rating -
   <h1><%= @rating %></h1>
-
-    Wind: <%= @wind_speed %><br>
-    Gusting to: <%= @wind_gust %> </br>
-    Snowcast: <%= number_to_human(@snow_day, units: {unit: "in"})%><br>
     <%=@score%></br>
-    <%=@slt%>
-
-
-  <body>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
-      html { height: 100% }
-      body { height: 100%; margin: 0; padding: 0 }
-      #map-canvas { height: 100% }
-    </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCBd_qIZpU_f2ZozozHpe-gVsJ7ZdTVxQY&sensor=false">
-    </script>
-    <script type="text/javascript">
-      function initialize() {
-        var mapOptions = {
-          center: new google.maps.LatLng(-34.397, 150.644),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
-            mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
- 
-
-    <div id="map-canvas"/>
-
-  </div>
-</body>
-    <div class='score'> 
     
-  </div>
+    <div class='data_container'>
+      <div class='wind'>
+        <h3> Conditions </h3>
+        Wind: <%= @wind_speed %> mph |   Day snowcast: <%= number_to_human(@snow_day, units: {unit: "in"})%><br>
+        Gusting to: <%= @wind_gust %> mph |  Night snowcast: <%= number_to_human(@snow_night, units: {unit: "in"})%><br>
+      </div>
+      <div class='travel_time'>
+        <h3> Travel Estimates </h3>
+        Time to South Lake Tahoe: <%=@slt%></br>
+        Time to Squaw Valley: <%=@squaw%>
+      </div>
+    </div>
+
+    <div class='score'> </div>
+
+  <h3> Real Time Traffic Map </h3>
+    <div class='map'>
+      <div id="map-canvas"></div>
+    </div>
 </div>

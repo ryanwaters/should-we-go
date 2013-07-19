@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+<% unless @score.nil? %>
+  <html class="score-<%= @score.round()/10 %>">
+<% end %>
+
 <head>
   <title>Shouldwego</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
