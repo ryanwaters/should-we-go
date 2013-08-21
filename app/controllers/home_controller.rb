@@ -1,25 +1,34 @@
 class HomeController < ApplicationController
 
   
-#   def get_all_locations
-#     @allLocations = {}
-#     1.times do |index|
-#       url = "http://opensnow.com/api/getLocationData.php?apikey=waters&lids=#{index+1}&type=json"
-#       results = JSON.load(open(url).read)
-#       location_id = results["location"]['meta']['location_id']
-#       location_name= results["location"]['meta']['name']
-#       @allLocations[location_id] = location_name
-#     end
-#   render :home
-# end
-  
-
-
   def home
   
+  @resorts =[
+    ["Kirkwood", "142"],
+    ["Sugar Bowl", "139"],
+    ["Northstar", "138"],
+    ["Heavenly", "135"],
+    ["Alpine Meadows", "148"],
+    ["Sierra at Tahoe", "148"],
+    ["Homewood","151"], 
+    ["Squaw Valley", "141"]
+  ]
+
+  @spots = [
+    ["Fort Point", "113"],
+    ["Eagles Point", "649"],
+    ["Deadmans", "648"],
+    ["Kellys Cove", "697"],
+    ["North Ocean Beach", "114"],
+    ["South Ocean Beach", "117"]
+  ]
+
   end
 
   def search
+  end
+
+  def surf_rating
   end
 
   def how_to_use
@@ -31,11 +40,6 @@ class HomeController < ApplicationController
   def twitter
     #https://stream.twitter.com/1.1/statuses/filter.json
   end
-
-  # def 
-  #   url = "http://opensnow.com/api/getLocationData.php?apikey=waters&lids=1&type=json"
-  #   results = JSON.load(open(url)).read
-  #   wind = @results['location']['meta']
 
 
 end

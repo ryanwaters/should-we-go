@@ -32,8 +32,8 @@
     <div class='data_container'>
       <div class='wind'>
         <h3> Conditions </h3>
-        Wind: <%= @wind_speed %> mph |   Day snowcast: <%= number_to_human(@snow_day, units: {unit: "in"})%><br>
-        Gusting to: <%= @wind_gust %> mph |  Night snowcast: <%= number_to_human(@snow_night, units: {unit: "in"})%><br>
+        Wind: <%= @wind_speed %> mph |   Day snowcast: <%= number_to_human(@ski_condition[:snow_day], units: {unit: "in"})%><br>
+        Gusting to: <%= @wind_gust %> mph |  Night snowcast: <%= number_to_human(@ski_condition[:snow_night], units: {unit: "in"})%><br>
       </div>
       <div class='travel_time'>
         <h3> Travel Estimates </h3>
@@ -43,6 +43,11 @@
     </div>
 
     <div class='score'> </div>
+
+  <div class='surf'> 
+    <%= @date %> </br>
+    <%= @size %> </br>
+  </div>
 
   <h3> Real Time Traffic Map </h3>
     <div class='map'>
