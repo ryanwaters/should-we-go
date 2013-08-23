@@ -32,6 +32,7 @@
     <div class='data_container'>
       <div class='wind'>
         <h3> Conditions </h3>
+        
         Wind: <%= @wind_speed %> mph |   Day snowcast: <%= number_to_human(@ski_condition[:snow_day], units: {unit: "in"})%><br>
         Gusting to: <%= @wind_gust %> mph |  Night snowcast: <%= number_to_human(@ski_condition[:snow_night], units: {unit: "in"})%><br>
       </div>

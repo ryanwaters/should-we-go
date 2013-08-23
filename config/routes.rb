@@ -9,5 +9,6 @@ Shouldwego::Application.routes.draw do
   post '/search_mountain' => 'mountain#search'
   post '/search_surf' => 'surf#search'
 
-  
+  get '/search_chart' => 'surf#surf_chart'
+
 end

@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 
-<% unless @score.nil? %>
+<% if @score.present? %>
+  <!-- Shred Score time! -->
   <html class="score-<%= @score.round()/10 %>">
-<% end %>
+<% elsif @surf_conditions.present? %>
+  <html class="surf-<%= @surf_conditions[:name].dasherize %>">
+<% else %>
+  <html>
+<% end -%>
 
 <head>
   <link href='http://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js">
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+<link rel="stylesheet" href="http://cdn.oesmith.co.uk/morris-0.4.3.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="http://cdn.oesmith.co.uk/morris-0.4.3.min.js"></script>
 
   <title>Shouldwego</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>

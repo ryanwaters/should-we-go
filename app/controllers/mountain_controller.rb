@@ -1,7 +1,9 @@
 class MountainController < ApplicationController
     include MountainHelper
+    layout :application, :only => [:search]
 
   def search
+    
  
     @ski_condition = get_ski_conditions params[:resort_id]
     @slt = get_travel_times[:slt]
@@ -10,6 +12,7 @@ class MountainController < ApplicationController
     @score = compute_score
     @rating = score_message(@score)
     #renders views/mountain/search out of the box
+    render :layout => 'application'
   end
 
 private

@@ -1,17 +1,48 @@
+
+
 <div class='surf_view'>
   <ul>  
-    <li><%= @name %></li>
-    <li><%= @date %></li> 
-
-    <li>Shred Rating</br><%= @total_score %></li>
+    <h2><%= @name %></h2>
+    <h2><%= @date %></h2> 
+    <li>Current Water Temp: <%= @temp %> F </li>
+    <!-- <li><%= @wind %></li> -->
+    <li>Avg wave size: <%= @size %> ft</li>
+    <li> Shred Rating:
+      <%= @shape_full %></li>
+  
   </ul>
 </div>
-<div class='surf_view2'>
-  <ul>  
+<!-- <div class='surf_view2'>
+<!--   <ul>  
     <li><%= @size %> ft </li>
     <li><%= @wind %></li>
     <li><%= @tide %></li>
     <li><%= @swell %></li>
-    <li><%= @temp %></li>   
+    <li><%= @temp %></li>  
+    <li><%= @hour %></li>   
 
-  </ul>
+  </ul> -->
+</div> 
+
+<div id="surf_chart" style="height: 300px;"></div>
+
+<script>
+new Morris.Area({
+  // ID of the element in which to draw the chart.
+  element: 'surf_chart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: <%= @graph.to_json.html_safe %>,
+  // The name of the data record attribute that contains x-values.
+  xkey: ['x'],
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['size'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ["Size in ft" ],
+  fillOpacity: [0.8],
+  postUnits: "ft"
+
+});
+</script>
+
