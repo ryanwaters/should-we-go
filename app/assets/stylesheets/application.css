@@ -70,16 +70,24 @@ h1 {
   width: 100%;
   bottom: 0px;
   left: 0px;
+  padding-top: 8px;
 }
 
 .footer_links p a {
   text-align: right;
   color: #000;
   font-size: 20px;
-  padding-right: 5px;
+  padding-bottom: 5px;
   text-decoration: none;
-
+  float:  left;
 }
+
+.footer_links p a.home {
+  right: 0px;
+  position: absolute;
+  padding-right: 10px;
+}
+
 .footer_links p {
   margin: 10px;
   font-family: 'Permanent Marker', cursive;
@@ -87,6 +95,7 @@ h1 {
 
 .footer_links {
   text-align: right;
+  display: inline;
 }
 
 .map {
@@ -202,12 +211,12 @@ p {
 }
 
 #surf_chart {
-  background-color: white;
-  position: absolute;
+  /*background-color: white;
+*/  position: absolute;
   left: 250px;
   right: 250px;
   top: 308px;
-  opacity: .8;
+/*  opacity: .8;*/
   height: 300px;
 }
 
@@ -244,5 +253,5 @@ html.surf-Kellys.Cove {
   padding: 26px;
   margin-bottom: 20px;
   margin-right: 80px;
-  bottom: 50px;
+  top: 10px;
 }
