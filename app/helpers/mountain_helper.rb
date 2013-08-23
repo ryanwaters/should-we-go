@@ -1,9 +1,9 @@
 module MountainHelper
   require 'open-uri'
-  require 'JSON'
+  require 'json'
 
    def get_ski_conditions resort
-       
+
       ski_condition ={}
       url = "http://opensnow.com/api/getLocationData.php?apikey=waters&lids=#{resort}&type=json"
       results = JSON.load(open(url).read)

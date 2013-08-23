@@ -1,6 +1,6 @@
 module SurfHelper
   require 'open-uri'
-  require 'JSON'
+  require 'json'
 
   def get_surf_conditions spot
 
