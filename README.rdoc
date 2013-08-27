@@ -1,0 +1,7 @@
+The initial idea behind this App was to provide the user with the information needed to decide if its worth going to Tahoe to ski for the weekend by returning a rating based on several weather and traffic conditions.  
+
+This eventually expanded to include surf conditions in the SF Bay Area as well, since the ski conditions are a bit boring right due to it being summer. 
+
+Several bits of info are called from multiple API's and the background images and rating message change based upon the rating that the program spits out. 
+
+This is my first Rails app
