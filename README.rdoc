@@ -1,7 +1,14 @@
+*ShredRating.com*
+
 The initial idea behind this App was to provide the user with the information needed to decide if its worth going to Tahoe to ski for the weekend by returning a rating based on several weather and traffic conditions.  
 
-This eventually expanded to include surf conditions in the SF Bay Area as well, since the ski conditions are a bit boring right due to it being summer. 
+This eventually expanded to include surf conditions in the SF Bay Area as well, since the ski conditions are a bit boring due to it being summer. 
 
-Several bits of info are called from multiple API's and the background images and rating message change based upon the rating that the program spits out. 
+Using multiple api's I called in several different weather conditions, assigned numerical values to them that added up to a rating between 0-100, and depending on rating gave them different calls to action and background images.
 
-This is my first Rails app
+This is my first Rails app, all the front end work is hand coded by me.
+
+Next steps:   
+- Format images to load faster    
+- Convert to Sass / Haml   
+- Provide more weather info
