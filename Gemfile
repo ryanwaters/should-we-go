@@ -8,16 +8,17 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 
-
+# gem 'activerecord-sqlite3-adapter'
 
 group :development do
   gem 'sqlite3'
   gem 'pry'
-gem 'pry-rails'
+  gem 'pry-rails'
 end
 
 group :production do
   gem 'pg'
+  gem 'sqlite3'
 end
 
 

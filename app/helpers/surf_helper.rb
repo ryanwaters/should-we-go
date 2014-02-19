@@ -45,13 +45,5 @@ module SurfHelper
 
 
 end
-      # This was in the controller ----->
-      # @date = @surf.first['date']
-      # @size = @surf.first['size_ft']
-      # @name = @surf.first['spot_name']
-      # @swell = @surf.first['shape_detail']['swell']
-      # @tide = @surf.first['shape_detail']['tide']
-      # @wind = @surf.first['shape_detail']['wind']
-
-     # Water temperature 
+   
     
